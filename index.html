@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<title></title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* * {
+            box-sizing: border-box;
+        } */
+
+        @font-face {
+            font-family: 'Roboto Slab';
+            src: url('Fonts/RobotoSlab-Bold.ttf') format('truetype');
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto Slab'
+        }
+
+        body {
+            margin: auto;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 100;
+        }
+
+        header {
+            background-color: #314b57;
+            color: white;
+        }
+
+        @media only screen and (min-width: 1049px) {
+            header {
+                height: 225px;
+            }
+        }
+
+        .column-centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            display: flex;
+            column-gap: 20px;
+        }
+
+        .section {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            column-gap: 15px;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .title-link {
+            text-decoration: none;
+        }
+
+        .title-text {
+            color: white;
+            margin-top: 5px !important;
+            margin-bottom: 10px;
+        }
+
+        .circular-image {
+            width: 140px;
+            height: 140px;
+        }
+
+        .responsive-map-image {
+            width: 100%;
+            max-height: 224.8px;
+            height: auto;
+        }
+
+        .responsive-surface-area-image {
+            width: 100%;
+            /* max-height: 224.8px; */
+            height: auto;
+        }
+
+        @media only screen and (max-width: 1048px) {
+            .change-to-column-centered {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .responsive-map-image {
+                margin-top: 15px;
+                margin-bottom: -4px;
+            }
+        }
+
+        .text-container-width {
+            max-width: 600px;
+        }
+
+        .text-beside-image {
+            margin-top: 0px;
+            line-height: 25px
+        }
+
+        @media only screen and (max-width: 850px) {
+            .change-row-to-column {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .text-beside-image {
+                padding-top: 15px;
+            }
+        }
+
+
+
+        @media only screen and (max-width: 700px) {
+            .grid-container {
+                grid-template-columns: auto auto;
+            }
+        }
+
+        @media only screen and (max-width: 550px) {
+            .grid-container {
+                grid-template-columns: auto;
+            }
+        }
+
+        .red-link-text {
+            text-decoration: none;
+            color: #ab3c3c;
+        }
+
+        .red-title {
+            color: #ab3c3c;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="row section change-to-column-centered">
+            <div>
+                <h3 style="margin-bottom: 9px; margin-top: 9px;">HEATING AND AIR CONDITIONING SERVICES</h3>
+                <div class="grid-container">
+                    <div class="column-centered">
+                        <a href="#"><img src="Assets/heating.png" alt="Heating" class="circular-image"></a>
+                        <a href="#" class="title-link">
+                            <h4 class="title-text">HEATING</h4>
+                        </a>
+                    </div>
+                    <div class="column-centered">
+                        <a href="#"><img src="Assets/cooling.png" alt="Cooling" class="circular-image"></a>
+                        <a href="#" class="title-link">
+                            <h4 class="title-text">COOLING</h4>
+                        </a>
+                    </div>
+                    <div class="column-centered">
+                        <a href="#"><img src="Assets/specials.png" alt="Specials" class="circular-image"></a>
+                        <a href="#" class="title-link">
+                            <h4 class="title-text">SPECIALS</h4>
+                        </a>
+                    </div>
+                    <div class="column-centered">
+                        <a href="#"><img src="Assets/plumber-arlington-tx.png" alt="Plumber" class="circular-image"></a>
+                        <a href="#" class="title-link">
+                            <h4 class="title-text">FOR PLUMBING</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#"><img src="Assets/sub_map.jpg" alt="map" class="responsive-map-image"></a>
+        </div>
+    </header>
+
+    <div id="Service-Area-Section" class="row section">
+        <div class="column">
+            <h1 class="red-title" style="margin: 10px 0px;">OUR SERVICE AREA</h1>
+            <div class="row change-row-to-column">
+                <img src="Assets/our-service-area.jpg" alt="service area" class="responsive-surface-area-image"></a>
+                <div class="column text-container-width">
+                    <p class="text-beside-image">Minuteman Heating & Air serves Fort Worth, Arlington, Aleda,
+                        Alvarado and the surrounding area with first quality services you can rely upon. Our certified
+                        technicians have the experience
+                        necessary to ensure a professional repair, installation and maintenance of your
+                        <b> heating and air conditioning </b> system and the skills needed to ensure the job is done
+                        right the first time. You are our first
+                        priority, and we are dedicated to your comfort and satisfaction. Contact us today to schedule
+                        your service, or a free estimate for a new <b>HVAC</b> system for residential or commercial
+                        applications.
+                    </p>
+                    <a href="#" class="red-link-text">Furnace Repair Service Areas</a>
+                    <a href="#" class="red-link-text">Air Conditioning Repair Service Areas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
