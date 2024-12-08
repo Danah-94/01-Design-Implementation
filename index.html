@@ -195,11 +195,85 @@
         }
 
 
-        /* Styling Article Section */
-        .articles-section .container {
-            max-width: 985px;
+
+        /* Styling Service Area Section */
+        .service-area-section .container {
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        .service-area-section h1 {
+            text-align: left;
+            color: #ab3c3c;
+            margin: 5px 0px;
+        }
+
+        .service-area-container {
+            display: grid;
+            grid-template-columns: 0.86fr 1.9fr auto;
+            column-gap: 0px;
+            row-gap: 20px;
+        }
+
+        .service-area-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .service-area-container .text-column {
+            padding-left: 30px;
+            padding-right: 10px;
+        }
+
+        .service-area-container .text-column p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            margin-top: 0px;
+        }
+
+        .service-area-container .text-column .service-area-links-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-area-container .text-column .service-area-links-container a {
+            font-size: 14px;
+            color: #ab3c3c;
+            line-height: 1.6;
+            text-decoration: none;
+        }
+
+        /* Responsive design for smaller screens */
+        @media only screen and (max-width: 1024px) {
+            .service-area-container {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 30px;
+
+            }
+
+            .service-area-container .text-column {
+                padding: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .service-area-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Styling Article Section */
+        .articles-section .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .articles-section {
+            padding-top: 40px;
         }
 
         .articles-section h2 {
@@ -211,12 +285,10 @@
         .articles-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 30px;
         }
 
         .articles-container article {
-            /* border: 1px solid #ddd;
-            border-radius: 5px; */
             text-align: left;
             height: 100%;
         }
@@ -245,7 +317,7 @@
             }
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 700px) {
             .articles-container {
                 grid-template-columns: 1fr;
             }
@@ -289,7 +361,7 @@
         </div>
     </header>
 
-    <div id="Service-Area-Section" class="row section">
+    <!-- <div id="Service-Area-Section" class="row section">
         <div class="column">
             <h1 class="red-title h1" style="margin: 10px 0px;">OUR SERVICE AREA</h1>
             <div class="row change-row-to-column" style="column-gap: 25px;">
@@ -308,6 +380,31 @@
                     <div class="links-below-text-beside-image column">
                         <a href="#" class="red-link-text">Furnace Repair Service Areas</a>
                         <a href="#" class="red-link-text">Air Conditioning Repair Service Areas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="service-area-section">
+        <div class="container">
+            <h1 class="h1">OUR SERVICE AREA</h1>
+            <div class="service-area-container">
+                <img src="Assets/our-service-area.jpg" alt="service area" class="image-column"></a>
+                <div class="text-column">
+                    <p>Minuteman Heating & Air serves Fort Worth,
+                        Arlington, Aleda, Alvarado and the surrounding area with first quality services you can rely
+                        upon. Our certified technicians have the experience
+                        necessary to ensure a professional repair, installation and maintenance of your
+                        <b> heating and air conditioning </b> system and the skills needed to ensure the job is done
+                        right the first time. You are our first
+                        priority, and we are dedicated to your comfort and satisfaction. Contact us today to schedule
+                        your service, or a free estimate for a new <b>HVAC</b> system for residential or commercial
+                        applications.
+                    </p>
+                    <div class="service-area-links-container">
+                        <a href="#">Furnace Repair Service Areas</a>
+                        <a href="#">Air Conditioning Repair Service Areas</a>
                     </div>
                 </div>
             </div>
