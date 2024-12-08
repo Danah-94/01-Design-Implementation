@@ -37,46 +37,6 @@
             font-weight: 100;
         }
 
-        header {
-            background-color: #314b57;
-            color: white;
-        }
-
-        @media only screen and (min-width: 1049px) {
-            header {
-                height: 225px;
-            }
-        }
-
-        .column-centered {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .row {
-            display: flex;
-            column-gap: 20px;
-        }
-
-        .section {
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        .grid-container {
-            display: grid;
-            column-gap: 15px;
-            grid-template-columns: auto auto auto auto;
-        }
-
         .title-link {
             text-decoration: none;
         }
@@ -92,99 +52,6 @@
             height: 140px;
         }
 
-        .responsive-map-image {
-            width: 100%;
-            max-height: 224.8px;
-            height: auto;
-        }
-
-        .responsive-surface-area-image {
-            max-width: 31%;
-            width: 100%;
-            height: auto;
-        }
-
-        .articles-images {
-            max-width: 31%;
-            height: auto;
-        }
-
-        @media only screen and (max-width: 1048px) {
-            .change-to-column-centered {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .responsive-map-image {
-                max-height: 100%;
-                padding-top: 15px;
-                margin-bottom: -4px;
-            }
-        }
-
-        .text-container-width {
-            max-width: 600px;
-        }
-
-        .text-beside-image {
-            margin-top: 0px;
-            line-height: 22px
-        }
-
-        .links-below-text-beside-image {
-            padding-top: 15px;
-            line-height: 18px;
-        }
-
-        .articles-grid-container {
-            display: grid;
-            column-gap: 15px;
-            grid-template-columns: auto auto auto;
-        }
-
-
-        @media only screen and (max-width: 878px) {
-
-            .change-row-to-column {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .text-beside-image {
-                padding-top: 15px;
-            }
-
-            .responsive-surface-area-image {
-                max-width: 100%;
-            }
-        }
-
-        @media only screen and (max-width: 700px) {
-
-            .grid-container {
-                grid-template-columns: auto auto;
-                column-gap: 10px;
-            }
-
-            .articles-grid-container {
-                column-gap: 15px;
-                grid-template-columns: auto auto;
-            }
-        }
-
-        @media only screen and (max-width: 550px) {
-            .grid-container {
-                grid-template-columns: auto;
-                row-gap: 15px;
-            }
-
-            .articles-grid-container {
-                display: grid;
-                row-gap: 15px;
-                grid-template-columns: auto;
-            }
-        }
-
         .red-link-text {
             text-decoration: none;
             color: #ab3c3c;
@@ -194,11 +61,100 @@
             color: #ab3c3c;
         }
 
-        .black {
-            color: black;
+        /* Styling Heating And Air Conditioning services Section */
+        .heating-and-air-conditioning-services-section {
+            background-color: #314b57;
+            color: white;
+            height: 225px;
+        }
+
+        .heating-and-air-conditioning-services-section .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .heating-and-air-conditioning-services-text-and-map-container {
+            display: flex;
+            column-gap: 15px;
+        }
+
+        .heating-and-air-conditioning-services-1st-column {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 0px;
+        }
+
+        .heating-and-air-conditioning-services-1st-column h3 {
+            padding: 0px;
+            margin: 10px 0px;
+        }
+
+        .heating-and-air-conditioning-services-images-with-links-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 15px;
+            text-align: center;
+        }
+
+        .map-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Responsive design for smaller screens */
+        @media only screen and (min-width: 1019px) {
+            .map-image {
+                max-height: 225px;
+            }
+        }
+
+        @media only screen and (max-width: 1018px) {
+            .heating-and-air-conditioning-services-section {
+                height: fit-content;
+            }
+
+            .heating-and-air-conditioning-services-images-with-links-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .map-container {
+                display: flex;
+                align-items: center;
+            }
+
+            .heating-and-air-conditioning-services-text-and-map-container {
+                column-gap: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .heating-and-air-conditioning-services-text-and-map-container {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+            }
+
+            .map-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: -4px;
+            }
         }
 
 
+        @media only screen and (max-width: 500px) {
+            .heating-and-air-conditioning-services-text-and-map-container {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+            }
+
+            .heating-and-air-conditioning-services-images-with-links-container {
+                grid-template-columns: 1fr;
+            }
+        }
 
         /* Styling Service Area Section */
         .service-area-section .container {
@@ -330,40 +286,46 @@
 </head>
 
 <body>
-    <header>
-        <div class="row section change-to-column-centered">
-            <div>
-                <h3 style="margin-bottom: 9px; margin-top: 9px;">HEATING AND AIR CONDITIONING SERVICES</h3>
-                <div class="grid-container">
-                    <div class="column-centered">
-                        <a href="#"><img src="Assets/heating.png" alt="Heating" class="circular-image"></a>
-                        <a href="#" class="title-link">
-                            <h4 class="title-text">HEATING</h4>
-                        </a>
-                    </div>
-                    <div class="column-centered">
-                        <a href="#"><img src="Assets/cooling.png" alt="Cooling" class="circular-image"></a>
-                        <a href="#" class="title-link">
-                            <h4 class="title-text">COOLING</h4>
-                        </a>
-                    </div>
-                    <div class="column-centered">
-                        <a href="#"><img src="Assets/specials.png" alt="Specials" class="circular-image"></a>
-                        <a href="#" class="title-link">
-                            <h4 class="title-text">SPECIALS</h4>
-                        </a>
-                    </div>
-                    <div class="column-centered">
-                        <a href="#"><img src="Assets/plumber-arlington-tx.png" alt="Plumber" class="circular-image"></a>
-                        <a href="#" class="title-link">
-                            <h4 class="title-text">FOR PLUMBING</h4>
-                        </a>
+
+    <section class="heating-and-air-conditioning-services-section">
+        <div class="container">
+            <div class="heating-and-air-conditioning-services-text-and-map-container">
+                <div class="heating-and-air-conditioning-services-1st-column">
+                    <h3>HEATING AND AIR CONDITIONING SERVICES</h3>
+                    <div class="heating-and-air-conditioning-services-images-with-links-container">
+                        <div class="heating-column">
+                            <a href="#"><img src="Assets/heating.png" alt="Heating" class="circular-image"></a>
+                            <a href="#" class="title-link">
+                                <h4 class="title-text">HEATING</h4>
+                            </a>
+                        </div>
+                        <div class="cooling-column">
+                            <a href="#"><img src="Assets/cooling.png" alt="Cooling" class="circular-image"></a>
+                            <a href="#" class="title-link">
+                                <h4 class="title-text">COOLING</h4>
+                            </a>
+                        </div>
+                        <div class="specials-column">
+                            <a href="#"><img src="Assets/specials.png" alt="Specials" class="circular-image"></a>
+                            <a href="#" class="title-link">
+                                <h4 class="title-text">SPECIALS</h4>
+                            </a>
+                        </div>
+                        <div class="plumber-column">
+                            <a href="#"><img src="Assets/plumber-arlington-tx.png" alt="Plumber"
+                                    class="circular-image"></a>
+                            <a href="#" class="title-link">
+                                <h4 class="title-text">FOR PLUMBING</h4>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div class="map-container">
+                    <a href="#"><img src="Assets/sub_map.jpg" alt="map" class="map-image"></a>
+                </div>
             </div>
-            <a href="#"><img src="Assets/sub_map.jpg" alt="map" class="responsive-map-image"></a>
         </div>
-    </header>
+    </section>
 
     <div class="service-area-section">
         <div class="container">
@@ -375,11 +337,11 @@
                         Arlington, Aleda, Alvarado and the surrounding area with first quality services you can rely
                         upon. Our certified technicians have the experience
                         necessary to ensure a professional repair, installation and maintenance of your
-                        <b class="black"> heating and air conditioning </b> system and the skills needed to ensure the
+                        <b> heating and air conditioning </b> system and the skills needed to ensure the
                         job is done
                         right the first time. You are our first
                         priority, and we are dedicated to your comfort and satisfaction. Contact us today to schedule
-                        your service, or a free estimate for a new <b class="black">HVAC</b> system for residential or
+                        your service, or a free estimate for a new <b>HVAC</b> system for residential or
                         commercial
                         applications.
                     </p>
